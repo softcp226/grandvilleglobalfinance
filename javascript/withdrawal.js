@@ -19,8 +19,8 @@ const handle_withdrawal = async (form) => {
   try {
     document.querySelector("#submit").innerHTML = "proccessing...";
     const response = await fetch(
-      //   "https://ethexenergy-ltd.glitch.me/api/user/withdraw",
-      "http://localhost:5000/api/user/withdraw",
+      "https://invesco-global-backend.glitch.me/api/user/withdraw",
+      // "http://localhost:5000/api/user/withdraw",
 
       {
         method: "POST",

@@ -4,8 +4,8 @@ const handle_submit_request = async (form) => {
   document.querySelector("#submit").innerHTML = "proccesing...";
   try {
     const response = await fetch(
-      // "https://ethexenergy-ltd.glitch.me/api/user/create_investment",
-      "http://localhost:5000/api/user/create_investment",
+      "https://invesco-global-backend.glitch.me/api/user/create_investment",
+      // "http://localhost:5000/api/user/create_investment",
 
       {
         method: "POST",
@@ -15,7 +15,7 @@ const handle_submit_request = async (form) => {
           user,
           investment_plan: form.plan,
           investment_amount: form.amount,
-          completion_time:form.completion_time,
+          completion_time: form.completion_time,
           // return_time: return_time.value,
           profit: form.profit,
         }),

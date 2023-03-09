@@ -3,6 +3,7 @@ const handle_updateuser = async (form) => {
   document.querySelector("#update").innerHTML = "Proccessing...";
   try {
     const response = await fetch(
+      "https://invesco-global-backend.glitch.me/api/user/update",
     //   "https://ethexenergy-ltd.glitch.me/api/user/update",
       {
         method: "POST",
@@ -30,7 +31,7 @@ const updatepassword = async (form) => {
   document.querySelector("#change").innerHTML = "Proccessing...";
   try {
     const response = await fetch(
-      "https://ethexenergy-ltd.glitch.me/api/user/update/update_password",
+      "https://invesco-global-backend.glitch.me/api/user/update/update_password",
       {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -232,8 +233,8 @@ document.querySelectorAll("input").forEach((input) => {
   const token = getCookie("token");
   try {
     const response = await fetch(
-      //   "https://ethexenergy-ltd.glitch.me/api/user/fetch",
-      "http://localhost:5000/api/user/fetch",
+      "https://invesco-global-backend.glitch.me/api/user/fetch",
+      // "http://localhost:5000/api/user/fetch",
 
       {
         method: "POST",

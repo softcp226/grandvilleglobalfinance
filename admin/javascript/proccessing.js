@@ -26,7 +26,7 @@ const delete_proccessing = async (data) => {
     const response = await fetch(
       // "http://localhost:5000/api/admin/payment_proccessing/delete",
 
-      "https://ethexenergy-ltd.glitch.me/api/admin/payment_proccessing/delete",
+      "https://invesco-global-backend.glitch.me/api/admin/payment_proccessing/delete",
       {
         method: "DELETE",
         headers: { "content-type": "application/json" },
@@ -94,7 +94,7 @@ const create_element = (data) => {
     const response = await fetch(
       // "http://localhost:5000/api/admin/payment_proccessing/fetch",
 
-      "https://ethexenergy-ltd.glitch.me/api/admin/payment_proccessing/fetch",
+      "https://invesco-global-backend.glitch.me/api/admin/payment_proccessing/fetch",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

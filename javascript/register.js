@@ -15,7 +15,7 @@ function setCookie(user, token) {
   document.cookie = `user=${user} ; ${expires}`;
   document.cookie = `token=${token} ; ${expires}`;
 
-  window.location.replace("/dashboard.html");
+  window.location.replace("dashboard.html");
 }
 
 // const display_given_error = (given_error) => {
@@ -40,8 +40,8 @@ const submit_userForm = async (form) => {
   try {
     document.querySelector("#register").innerHTML = "Proccessing...";
     const response = await fetch(
-    //   "https://bristolenergy.glitch.me/api/newuser/register",
-      "http://localhost:5000/api/newuser/register",
+      "https://invesco-global-backend.glitch.me/api/newuser/register",
+      // "http://localhost:5000/api/newuser/register",
 
       {
         method: "POST",

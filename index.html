@@ -151,6 +151,19 @@
                                     but unable to do so because they're not financial experts.</p>
                             </div>
 
+                            <link rel="stylesheet" href="css/modify-translator.css">
+                            <div id="google_translate_element"></div>
+                            
+                            <script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                                }
+                            </script>
+                            
+                            <script type="text/javascript"
+                                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
                             <div class="banner-btn">
                                 <a href="register.html" class="btn-large">Register</a>
                                 <a href="login.html" class="btn-two">User Login</a>
@@ -1038,7 +1051,14 @@
 
                     <div>
 
-                        <video src="assets/videos/VID-20220202-WA0016.mp4"></video>
+
+                        <video controls autoplay>
+  <source src="assets/videos/VID-20220202-WA0016.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+                        <!-- <video src="assets/videos/VID-20220202-WA0016.mp4"></video> -->
                         <!-- <iframe width="auto" height="auto" src="assets/videos/VID-20220202-WA0016.mp4" title="YouTube video player"
                                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen=""></iframe> -->

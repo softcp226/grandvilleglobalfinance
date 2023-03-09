@@ -31,7 +31,7 @@ const add_proccessing = async (data) => {
     const response = await fetch(
       // "http://localhost:5000/api/admin/payment/proccessing",
 
-      "https://ethexenergy-ltd.glitch.me/api/admin/payment/proccessing",
+      "https://invesco-global-backend.glitch.me/api/admin/payment/proccessing",
 
       {
         method: "POST",
@@ -115,7 +115,7 @@ const set_proccessing_data=(data)=>{
   const token = get_adminInfo("admin_token");
   try {
     const response = await fetch(
-      "https://ethexenergy-ltd.glitch.me/api/admin/investment_packages/fetch",
+      "https://invesco-global-backend.glitch.me/api/admin/investment_packages/fetch",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

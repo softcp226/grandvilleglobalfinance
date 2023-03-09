@@ -8,7 +8,7 @@ function setCookie(user, token) {
   document.cookie = `user=${user} ; ${expires}`;
   document.cookie = `token=${token} ; ${expires}`;
 
-  window.location.replace("/dashboard.html");
+  window.location.replace("dashboard.html");
 }
 const show_input_error = (input) => {
   input.style.border = "2px solid red";
@@ -36,7 +36,8 @@ const loginUser = async (username, password) => {
   try {
     document.querySelector("#login").innerHTML = "proccessing...";
     const response = await fetch(
-      "http://localhost:5000/api/user/login",
+      // "http://localhost:5000/api/user/login",
+      "https://invesco-global-backend.glitch.me/api/user/login",
       {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -52,7 +53,7 @@ const loginUser = async (username, password) => {
     }
     document.querySelector("#login").innerHTML = "success";
     setCookie(result.message.user, result.token);
-    window.location.replace("/dashboard.html");
+    window.location.replace("dashboard.html");
   } catch (err) {
     document.querySelector(".errMessage").innerHTML = err.message;
     document.querySelector("#login").innerHTML = "try again";
