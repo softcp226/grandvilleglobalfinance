@@ -1,48 +1,21 @@
+function copyToClipboard() {
+  var copyText = document.querySelector("#referral").innerHTML;
+  navigator.clipboard.writeText(copyText).then(() => {
+    // Alert the user that the action took place.
+    // Nobody likes hidden stuff being done under the hood!
+    if (copyText.length < 1) return;
+    alert("Copied wallet to clipboard");
+    copied_to_clipboard = true;
+  });
+}
+
+document.querySelector("#copy").onclick = () => copyToClipboard();
+
 const setText2 = (user) => {
   let referral = document.querySelector("#referral");
   referral.href = user.referral_link;
   referral.innerHTML = user.referral_link;
-
-  //   document.querySelectorAll("#user_passport").forEach((passport) => {
-  //     passport.src = user.passport;
-  //   });
-  //   document.querySelector("#final_balance").innerHTML = `$${user.final_balance
-  //     .toString()
-  //     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`;
-  //   document.querySelector("#profit_loss").innerHTML = `$${user.profit_loss
-  //     .toString()
-  //     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`;
-  //   document.querySelector(
-  //     "#active_investment"
-  //   ).innerHTML = `$${user.active_investment
-  //     .toString()
-  //     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`;
-
-  //   document.querySelector("#referral_bonus").innerHTML = `$${user.referral_bonus
-  //     .toString()
-  //     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`;
-  //   // console.log("user", user);
 };
-
-// .toString()
-//     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
-
-// const getCookie = (cname) => {
-//   let name = cname + "=";
-//   let decodedCookie = decodeURIComponent(document.cookie);
-//   let ca = decodedCookie.split(";");
-//   for (let i = 0; i < ca.length; i++) {
-//     let c = ca[i];
-//     while (c.charAt(0) == " ") {
-//       c = c.substring(1);
-//     }
-//     if (c.indexOf(name) == 0) {
-//       return c.substring(name.length, c.length);
-//     }
-//   }
-//   // return "";
-//   window.location.href = "/login.html";
-// };
 
 (async () => {
   const user = getCookie("user");

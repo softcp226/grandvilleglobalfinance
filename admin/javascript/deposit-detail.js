@@ -24,7 +24,6 @@ const get_adminInfo = (cname) => {
   window.location.href = "/admin";
 };
 
-
 const addProblem = async (data) => {
   document.querySelector("#add_to_problem").innerHTML = "Proccessing...";
   try {
@@ -38,15 +37,14 @@ const addProblem = async (data) => {
     );
     const result = await response.json();
     console.log(result);
-    if (result.error){
+    if (result.error) {
       document.querySelector("#errMessage").innerHTML = result.errMessage;
-    }else{
-          document.querySelector("#add_to_problem").innerHTML =
-            "Success";
+    } else {
+      document.querySelector("#add_to_problem").innerHTML = "Success";
 
-        window.location.replace("/admin/pending-deposit.html");
+      window.location.replace("/admin/pending-deposit.html");
     }
-    } catch (error) {
+  } catch (error) {
     document.querySelector("#add_to_problem").innerHTML = "Try again";
     console.log(error);
   }
@@ -57,9 +55,9 @@ document.querySelector("#add_to_problem").onclick = () => {
   const admin = get_adminInfo("admin");
   const token = get_adminInfo("admin_token");
   console.log(token);
- const deposit_request = getDeposit_request();
+  const deposit_request = getDeposit_request();
 
-  addProblem({ token, admin, deposit_request});
+  addProblem({ token, admin, deposit_request });
 };
 
 const handle_delete_deposit_request = async (btn, deposit_id) => {
@@ -107,6 +105,8 @@ const submit_deposit_approval = async (form) => {
   try {
     const response = await fetch(
       "https://invesco-global-backend.glitch.me/api/admin/deposit/approve",
+      // "http://localhost:5000/api/admin/deposit/approve",
+
       {
         method: "POST",
         headers: { "content-type": "application/json" },

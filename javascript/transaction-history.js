@@ -76,12 +76,13 @@ const shape_result = (userInfo) => {
       return (document.querySelector(".errMessage").innerHTML =
         result.errMessage);
     shape_result(result.message);
-    document.querySelector(
-      "#balance",
-    ).innerHTML = `**Available Balance= $${result.user_balance
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}**`;
+    // document.querySelector(
+    //   "#balance",
+    // ).innerHTML = `**Available Balance= $${result.user_balance
+    //   .toString()
+    //   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}**`;
   } catch (err) {
+    console.log(err)
     document.querySelector(".errMessage").innerHTML = err.message;
   }
 })();
