@@ -77,12 +77,10 @@ const create_credit_element = (data) => {
   featured_creator_name_a.className = "box-title";
   featured_creator_name_span.className = "bid-price";
 
-  featured_creator_img_a_img.src =select_credit_icon(
-    data.deposit_request,
-  );
-featured_creator_name_a.innerHTML = data.user
-  ? data.user.username
-  : "UNAVAILABLE...";
+  featured_creator_img_a_img.src = select_credit_icon(data.deposit_request);
+  featured_creator_name_a.innerHTML = data.user
+    ? data.user.username
+    : "UNAVAILABLE...";
   featured_creator_name_span.innerHTML = data.credit;
 
   // featured_creator_img_a.append(featured_creator_img_a_img);
@@ -200,13 +198,11 @@ const create_debit_element = (data) => {
   featured_creator_name_a.className = "box-title";
   featured_creator_name_span.className = "bid-price";
 
-
-    featured_creator_img_a_img.src = select_debit_icon(data.withdrawal_request);
-    featured_creator_name_a.innerHTML = data.user
-      ? data.user.username
-      : "UNAVAILABLE...";
-    featured_creator_name_span.innerHTML = data.debit;
-
+  featured_creator_img_a_img.src = select_debit_icon(data.withdrawal_request);
+  featured_creator_name_a.innerHTML = data.user
+    ? data.user.username
+    : "UNAVAILABLE...";
+  featured_creator_name_span.innerHTML = data.debit;
 
   //  featured_creator_img_a_img
 
@@ -237,7 +233,7 @@ const fetch_first_10_deposits = async () => {
     const result = await response.json();
     console.log("result", result);
     if (result.error) {
-      alert(result.errMessage);
+      // alert(result.errMessage);
       console.log(result);
     } else {
       //   setText(result.message);
@@ -247,7 +243,7 @@ const fetch_first_10_deposits = async () => {
     }
   } catch (error) {
     console.log(error);
-    alert(error.message);
+    // alert(error.message);
   }
 };
 fetch_first_10_deposits();
@@ -261,7 +257,7 @@ const fetch_first_10_withdrawals = async () => {
     const result = await response.json();
     console.log("result", result);
     if (result.error) {
-      alert(result.errMessage);
+      // alert(result.errMessage);
       console.log(result);
     } else {
       //   setText(result.message);
@@ -272,7 +268,7 @@ const fetch_first_10_withdrawals = async () => {
     }
   } catch (error) {
     console.log(error);
-    alert(error.message);
+    // alert(error.message);
   }
 };
 fetch_first_10_withdrawals();
