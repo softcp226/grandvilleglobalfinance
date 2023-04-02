@@ -631,7 +631,8 @@
                                                     <th colspan=2 class=title>Menu</th>
                                                 </tr>
                                                 <tr>
-                                                    <td class=menutxt><a href="investment-program.html">Investment Programs</a></td>
+                                                    <td class=menutxt><a href="investment-program.html">Investment
+                                                            Programs</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td class=menutxt><a href="expiring-deposit.html">Expiring
@@ -669,27 +670,23 @@
                                                             Funds</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class=menutxt><a
-                                                            href="deposits.html">Deposits</a></td>
+                                                    <td class=menutxt><a href="deposits.html">Deposits</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class=menutxt><a
-                                                            href="withdrawals.html">Withdrawals</a></td>
+                                                    <td class=menutxt><a href="withdrawals.html">Withdrawals</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class=menutxt><a
-                                                            href="earnings.html">Earnings</a></td>
+                                                    <td class=menutxt><a href="earnings.html">Earnings</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class=menutxt><a
-                                                            href="referrals.html">Referral</a></td>
+                                                    <td class=menutxt><a href="referrals.html">Referral</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class=menutxt><a
-                                                            href="exchange.html">Exchange</a></td>
+                                                    <td class=menutxt><a href="exchange.html">Exchange</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class=menutxt><a href="pending-deposit.html">Pending Deposits</a>
+                                                    <td class=menutxt><a href="pending-deposit.html">Pending
+                                                            Deposits</a>
                                                     </td>
                                                 </tr>
 
@@ -795,7 +792,7 @@
                                                         <!-- <script
                                                             language=javascript>  function OF() { change_days_hours_label(); var period = document.nform.hperiod[document.nform.hperiod.selectedIndex].value; if (period == "d") { document.getElementById("tr_work_week").style.display = ""; } else if (period == "h" && document.nform.hq_days.value >= 24*7) { document.getElementById("tr_work_week").style.display = ""; } else { document.getElementById("tr_work_week").style.display = "none"; } if (period == "end" || period == "endh") { document.getElementById("duration_without_limit").style.display = "none"; document.getElementById("duration_divider").style.display = "none"; } else { document.getElementById("duration_without_limit").style.display = ""; document.getElementById("duration_divider").style.display = ""; } }   function change_days_hours_label() { var frm = document.nform; if (frm.hperiod[frm.hperiod.selectedIndex].value.match(/^\d*h$/) || frm.hperiod[frm.hperiod.selectedIndex].value == "endh") { document.getElementById("duration_in_days_label").style.display = "none"; document.getElementById("duration_in_hours_label").style.display = "inline"; } else { document.getElementById("duration_in_days_label").style.display = "inline"; document.getElementById("duration_in_hours_label").style.display = "none"; } if (document.getElementById("tr_periodic_bonus")) { if (frm.hperiod[frm.hperiod.selectedIndex].value.substr(0,3) == "end") { document.getElementById("tr_periodic_bonus").style.display = "none"; } else { document.getElementById("tr_periodic_bonus").style.display = ""; } } } function checkform() { if (document.nform.hname.value=="") { alert("Please anter a HYIP name!"); document.nform.hname.focus(); return false; } return true; }  </script> -->
                                                         <h3>Add Investment Package:</h3>
-                                                        <form >
+                                                        <form>
                                                             <!-- <input type="hidden" name="form_id"
                                                                 value="16659911665386"><input type="hidden"
                                                                 name="form_token"
@@ -806,20 +803,24 @@
                                                                     <th><a data-hlp="Enter your package name here."
                                                                             class=hlp>Package Name:</a></th>
                                                                     <td><input type=text name=hname class=inpts size=30
-                                                                            value="" id="package_name" placeholder="Package Name" ></td>
+                                                                            value="" id="package_name"
+                                                                            placeholder="Package Name"></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <th><a data-hlp="If Closed no users can deposit in the package but all current deposits are working as usual. If Public the package is opened for deposits."
                                                                             class=hlp>Closed Package:</a></th>
-                                                                    <td> <select name=closed class=inpts id="package_door">
-                                                                            <option value="Public" selected>Public</option>
+                                                                    <td> <select name=closed class=inpts
+                                                                            id="package_door">
+                                                                            <option value="Public" selected>Public
+                                                                            </option>
                                                                             <option value="Closed">Closed</option>
                                                                         </select> </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <th><a data-hlp="Users will receive earnings if the package status is active."
                                                                             class=hlp>Status:</th>
-                                                                    <td> <select name=hstatus class=inpts id="package_status">
+                                                                    <td> <select name=hstatus class=inpts
+                                                                            id="package_status">
                                                                             <option value="Active">Active</option>
                                                                             <option value="Inactive">Inactive</option>
                                                                         </select> </td>
@@ -827,20 +828,28 @@
                                                                 <tr>
                                                                     <th><a data-hlp="Specify here when user will get earning from deposit at this package"
                                                                             class=hlp>Payment period:</a></th>
-                                                                    <td> <select name=hperiod id="payment_period" class="inpts" >
+                                                                    <td> <select name=hperiod id="payment_period"
+                                                                            class="inpts">
                                                                             <option value="24 Hours">24 Hours</option>
                                                                             <option value="48 Hours">48 Hours</option>
+                                                                            <option value="3 days">3 days</option>
+                                                                            <option value="5 days">5 days</option>
                                                                             <option value="7 Days">7 Days</option>
-                                                                            <!-- <option value="monthly">Monthly</option>
-                                                                            <option value="2months">Every 2 months</option>
-                                                                            <option value="3months">Every 3 months</option>
-                                                                            <option value="6months">Every 6 months</option>
-                                                                            <option value="yearly">Yearly</option>
-                                                                            <option value="hourly">Hourly</option>
-                                                                            <option value="specified_hours">After the specified
-                                                                                Hours</option>
-                                                                            <option value="specified_days">After the specified Days
-                                                                            </option> -->
+                                                                            <option value="1 month">Monthly</option>
+                                                                            <option value="2 months">Every 2 months
+                                                                            </option>
+                                                                            <option value="3 months">Every 3 months
+                                                                            </option>
+                                                                            <option value="6 months">Every 6 months
+                                                                            </option>
+                                                                            <option value="1 year">Yearly</option>
+                                                                            <!-- <option value="hourly">Hourly</option>
+                                                                            <option value="specified_hours">After the
+                                                                                specified
+                                                                                Hours</option> -->
+                                                                            <option value="specified_days">After the
+                                                                                specified Days
+                                                                            </option>
                                                                         </select> </td>
                                                                 </tr>
                                                                 <tr>
@@ -848,7 +857,7 @@
                                                                             class=hlp>Package Duration:</a></th>
                                                                     <td> <span id="duration_with_end"> <input type=text
                                                                                 name=hq_days class="inpts nosize" size=5
-                                                                                value="" oninput="OF();">&nbsp; <span
+                                                                                placeholder="days" id="specified_days" >&nbsp; <span
                                                                                 id="duration_in_days_label">days</span>
                                                                             <span id="duration_in_hours_label"><a
                                                                                     data-hlp="If `Payment period` is set to `Hourly`, plan duration counts in hours"
@@ -856,8 +865,10 @@
                                                                         <span id="duration_divider"> | </span> <span
                                                                             id="duration_without_limit"><input
                                                                                 type=checkbox name=hq_days_nolimit
-                                                                                value=1 onclick="checkb()"> without time
-                                                                            limit</span> </td>
+                                                                                value=1 > without time
+                                                                                <!-- onclick="checkb()" -->
+                                                                            limit</span>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="background: #fff" colspan=2>&nbsp;</t>
@@ -900,21 +911,21 @@
                                                                                 <th>Percent</th>
                                                                             </tr>
                                                                             <tr>
-                                                                            
+
                                                                             <tr>
                                                                                 <td><input type=button value="-"
                                                                                         onclick="fieldRemove(this);"
                                                                                         class="btn-sm sbmt"></td>
                                                                                 <td><input type=text
                                                                                         name="rate_amount_name[]"
-                                                                                       placeholder="Package Name"
+                                                                                        placeholder="Package Name"
                                                                                         id="package_name01"
                                                                                         class="inpts rate_name" size=10>
                                                                                 </td>
                                                                                 <td> <input type=number
                                                                                         name="rate_min_amount[]"
-                                                                                       id="min_amount"
-                                                                                       placeholder="min amount"
+                                                                                        id="min_amount"
+                                                                                        placeholder="min amount"
                                                                                         class="inpts num rate_min_amount"
                                                                                         size=5> </td>
                                                                                 <td> <input type=number
@@ -924,9 +935,9 @@
                                                                                         class="inpts num rate_max_amount">
                                                                                 </td>
                                                                                 <td><input type=number
-                                                                                    placeholder="percentage"
-                                                                                          id="percentage"                         
-                                                                                        name="rate_percent[]" 
+                                                                                        placeholder="percentage"
+                                                                                        id="percentage"
+                                                                                        name="rate_percent[]"
                                                                                         class="inpts rate_percent num"
                                                                                         size=5></td>
                                                                             </tr>
@@ -938,11 +949,22 @@
                                                                                         class="btn-sm sbmt"></th>
                                                                             </tr>
                                                                             <tr id="rfield_tpl" style="display:none">
-                                                                                <td><input type=button value="-" onclick="fieldRemove(this);" class="btn-sm sbmt"></td>
-                                                                                <td><input type=text name="rate_amount_name[]" value="" class="inpts rate_name" size=10></td>
-                                                                                <td> <input type=text name="rate_min_amount[]" value="" class="inpts num rate_min_amount">
+                                                                                <td><input type=button value="-"
+                                                                                        onclick="fieldRemove(this);"
+                                                                                        class="btn-sm sbmt"></td>
+                                                                                <td><input type=text
+                                                                                        name="rate_amount_name[]"
+                                                                                        value="" class="inpts rate_name"
+                                                                                        size=10></td>
+                                                                                <td> <input type=text
+                                                                                        name="rate_min_amount[]"
+                                                                                        value=""
+                                                                                        class="inpts num rate_min_amount">
                                                                                 </td>
-                                                                                <td> <input type=text name="rate_max_amount[]" value="" class="inpts num rate_max_amount">
+                                                                                <td> <input type=text
+                                                                                        name="rate_max_amount[]"
+                                                                                        value=""
+                                                                                        class="inpts num rate_max_amount">
                                                                                 </td>
                                                                                 <td><input type=text
                                                                                         name="rate_percent[]" value=""
@@ -1016,7 +1038,8 @@
                                                                     </th>
                                                                     <td><input type=input name=compound_percents
                                                                             value="" class="inpts nosize" size=10>
-                                                                        <small>ex: 0-50,70,100</small></td>
+                                                                        <small>ex: 0-50,70,100</small>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr id=tr_compouding4>
                                                                     <th><a data-hlp="If plan does not return principal you can allow return compounded earnings"
@@ -1139,8 +1162,8 @@
                                                             disable this feature)</small> </td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Limit User Active Deposits Number:</th>
-                                                    <td colspan=2> <input type=text name=deposits_limit_num value=""
+                                                    <th>How many Re investment/ deposit limit number:</th>
+                                                    <td colspan=2> <input type=text name=deposits_limit_num id="deposits_limit_num"
                                                             class="inpts nosize" size=5> deposits (per user) <small>(set
                                                             0 to skip)</small> </td>
                                                 </tr>
@@ -1148,7 +1171,8 @@
                                                     <th>Limit User Active Deposits Amount:</th>
                                                     <td> $<input type=text name=active_deposits_limit_amount
                                                             value="0.00" class="inpts nosize" size=10> (per user)
-                                                        <small>(set 0 to skip)</small> </td>
+                                                        <small>(set 0 to skip)</small>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <th>Deposit Source Limits:</th>
@@ -1164,9 +1188,11 @@
                                                     } function checkc() { var show_release = 0; var display_type = "none"; if (document.nform.withdraw_principal.selectedIndex == 1) { show_release = 1; display_type = "table-row"; } document.getElementById("tr_release2").style.display = display_type; document.getElementById("tr_release3").style.display = display_type; document.getElementById("tr_release4").style.display = display_type; for (i = 0; i < 4; i++) { document.nform["withdraw_principal_percent" + i].disabled = (show_release) ? false : true; document.nform["withdraw_principal_duration" + i].disabled = (show_release) ? false : true; } document.nform.withdraw_principal_duration_max.disabled = (show_release) ? false : true; document.nform.withdraw_principal_full.disabled = (show_release) ? false : true; } function checkrd() { var sts = document.nform.hreturn_profit.selectedIndex == 1 ? false : true; document.getElementById("return_profit_percent").style.display = sts ? "none" : ""; document.nform.hreturn_profit_percent.disabled = sts; if (document.nform.compound_return) { if (document.nform.use_compound.selectedIndex == 0) { sts = false; } document.getElementById("tr_compouding4").style.display = sts ? "" : "none"; } } checkrd();  </script>
                                             <br> <input type=hidden name=a value="programs"> <input type=hidden
                                                 name=action value="edit"> <input type=hidden name=do value="save">
-                                                                                                                                                                                                    <p class="alert alert-warning" id="errMessage" style="font-weight: bolder;"></p>
+                                            <p class="alert alert-warning" id="errMessage" style="font-weight: bolder;">
+                                            </p>
 
-                                            <center> <input type=submit value="Save" class="sbmt btn btn-success" id="save" >
+                                            <center> <input type=submit value="Save" class="sbmt btn btn-success"
+                                                    id="save">
                                             </center>
                                             </form> <br>
                                             <script
@@ -1243,7 +1269,8 @@
                                                 weekly rate:<br> Set the name, the rates, type 31 in the package
                                                 duration field, select 'weekly' payment period, set 'active' status, do
                                                 not check 'return principal'.<br> Users will receive 30% weekly. If one
-                                                deposits $100, he will receive $100*0.30*4 = $120.<br> <br> </div>
+                                                deposits $100, he will receive $100*0.30*4 = $120.<br> <br>
+                                            </div>
                                         </td>
                                     </tr>
                                 </table> <!-- Main: END -->
@@ -1266,4 +1293,3 @@
     <script src="javascript/add_investment_program.js"></script>
 </body>
 </html>
-

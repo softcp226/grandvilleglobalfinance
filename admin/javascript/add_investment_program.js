@@ -33,12 +33,12 @@ const package_name = document.querySelector("#package_name");
 const package_door = document.querySelector("#package_door");
 const package_status = document.querySelector("#package_status");
 const payment_period = document.querySelector("#payment_period");
+const specified_days = document.querySelector("#specified_days");
 const package_name01 = document.querySelector("#package_name01");
 const min_amount = document.querySelector("#min_amount");
 const max_amount = document.querySelector("#max_amount");
 const percentage = document.querySelector("#percentage");
-
-
+const invest_limit_number = document.querySelector("#deposits_limit_num");
 
 const edit_investment_program = async (data) => {
   alert("called");
@@ -71,9 +71,7 @@ const edit_investment_program = async (data) => {
   }
 };
 
-
 const add_investment_program = async (data) => {
- 
   document.querySelector("#save").value = "proccessing";
   try {
     const response = await fetch(
@@ -109,6 +107,9 @@ document.querySelector("#save").onclick = () => {
   if (!package_door.value) return show_input_error(package_door);
   if (!package_status.value) return show_input_error(package_status);
   if (!payment_period.value) return show_input_error(payment_period);
+  if (payment_period.value == "specified_days") {
+    if (!specified_days.value) return show_input_error(specified_days);
+  }
   if (!package_name01.value) return show_input_error(package_name01);
   if (!min_amount.value) return show_input_error(min_amount);
   if (!max_amount.value) return show_input_error(max_amount);
@@ -116,18 +117,22 @@ document.querySelector("#save").onclick = () => {
 
   let admin = get_adminInfo("admin");
   let token = get_adminInfo("admin_token");
-  if(update_user_only ==true)return edit_investment_program({
-    admin,
-    package_id: Get_progam_ID(),
-    token,
-    package_name: package_name.value,
-    package_door: package_door.value,
-    package_status: package_status.value,
-    payment_period: payment_period.value,
-    min: min_amount.value,
-    max: max_amount.value,
-    percentage: percentage.value,
-  });
+  if (update_user_only == true)
+    return edit_investment_program({
+      admin,
+      package_id: Get_progam_ID(),
+      token,
+      package_name: package_name.value,
+      package_door: package_door.value,
+      package_status: package_status.value,
+      payment_period: payment_period.value,
+      specified_days:
+        payment_period.value == "specified_days" ? specified_days.value : "",
+      min: min_amount.value,
+      max: max_amount.value,
+      percentage: percentage.value,
+      invest_limit_number: invest_limit_number.value,
+    });
 
   add_investment_program({
     admin,
@@ -136,9 +141,12 @@ document.querySelector("#save").onclick = () => {
     package_door: package_door.value,
     package_status: package_status.value,
     payment_period: payment_period.value,
+    specified_days:
+      payment_period.value == "specified_days" ? specified_days.value : "",
     min: min_amount.value,
     max: max_amount.value,
     percentage: percentage.value,
+    invest_limit_number: invest_limit_number.value,
   });
 };
 
@@ -155,51 +163,50 @@ document.querySelectorAll("select").forEach(
     }),
 );
 
-const set_program_data=(data)=>{
-package_name.value=data.package_name;
-package_door.value=data.package_door;
-package_status.value=data.package_status;
-payment_period.value = data.payment_period;
-package_name01.value=data.package_name;
-min_amount.value=data.min;
-max_amount.value=data.max;
-percentage.value=data.percentage;
-}
+const set_program_data = (data) => {
+  package_name.value = data.package_name;
+  package_door.value = data.package_door;
+  package_status.value = data.package_status;
+  payment_period.value = data.payment_period;
+  package_name01.value = data.package_name;
+  min_amount.value = data.min;
+  max_amount.value = data.max;
+  percentage.value = data.percentage;
+};
 
 (async () => {
   // event.preventDefault()
   const package_id = Get_progam_ID();
   if (!package_id) return (update_user_only = false);
-   const admin=get_adminInfo("admin");
-   const token=get_adminInfo("admin_token")
-   try {
-     const response = await fetch(
-        "https://invesco-global-backend.glitch.me/api/admin/investment_packages/fetch",
+  const admin = get_adminInfo("admin");
+  const token = get_adminInfo("admin_token");
+  try {
+    const response = await fetch(
+      "https://invesco-global-backend.glitch.me/api/admin/investment_packages/fetch",
 
-      //  "http://localhost:5000/api/admin/investment_packages/fetch",
+      // "http://localhost:5000/api/admin/investment_packages/fetch",
 
-       {
-         method: "POST",
-         headers: { "content-type": "application/json" },
-         body: JSON.stringify({ admin, token, package_id }),
-       },
-     );
-     const result = await response.json()
-     console.log(result);
-     if (result.error) {
+      {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ admin, token, package_id }),
+      },
+    );
+    const result = await response.json();
+    console.log(result);
+    if (result.error) {
       //  document.querySelector("#save").value = "Try again";
-       document.querySelector("#errMessage").innerHTML = result.errMessage;
-     } else {
-  
-       set_program_data(result.message);
-   
+      document.querySelector("#errMessage").innerHTML = result.errMessage;
+    } else {
+      set_program_data(result.message);
+
       //  document.querySelector("#save").value = "Success";
       //  window.location.href = `/admin/investment-program.html`;
-     }
-   } catch (error) {
-     console.log(error);
+    }
+  } catch (error) {
+    console.log(error);
     //  document.querySelector("#save").value = "Try again";
 
-     document.querySelector("#errMessage").innerHTML = error.message;
-   }
+    document.querySelector("#errMessage").innerHTML = error.message;
+  }
 })();

@@ -95,7 +95,7 @@ const create_element = (data) => {
     "?a=programs&amp;action=down&amp;id=1&amp;form_id=16637567271321&amp;form_token=4a53101d60527411b5271f9b1582b34c";
 
   percentage_td.append(percentage_b);
-  percentage_b.innerHTML = `${data.percentage}% After ${data.payment_period} hours`;
+  percentage_b.innerHTML = `${data.percentage}% After ${data.payment_period}`;
   limits_container_td.append(limits_nobr);
   limits_nobr.innerHTML = `Limits $${data.min} - $${data.max}`;
   const limits_container_br = document.createElement("br");
