@@ -1,0 +1,76 @@
+.deposit_withdrawal_container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 80vw;
+  justify-content: center;
+  justify-self: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.latest_deposit,.latest_withdrawal {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+.deposit {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: #fff;
+  width: 300px;
+  max-width: 300px;
+  height: 120px;
+  padding: 10px;
+  overflow-x: hidden;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.dep_icon_container > img {
+  width: 90px;
+  border-radius: 50px;
+  border-color: #000;
+  border-width: 1px;
+  align-self: flex-start;
+  left: 100%;
+}
+
+@media (max-width: 650px) {
+  .deposit_withdrawal_container {
+    max-width: 100vw;
+  }
+
+  .deposit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: #fff;
+  width: 80vw;
+  max-width: 100vw;
+  height: 120px;
+  padding: 10px;
+  overflow-x: hidden;
+  border-radius: 10px;
+  margin: 10px;
+}
+}
+
+@media (min-width: 650px) {
+  .deposit_withdrawal_container {
+    max-width: 100vw;
+  }
+}
+
+@media (min-width: 1200px) {
+     .deposit_withdrawal_container {
+    max-width: 85vw;
+  }
+}

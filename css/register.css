@@ -6100,6 +6100,8 @@ body {
     background-size: cover;
     max-width: 1140px;
     position: relative;
+    display:flex;
+    align-items: center;
 }
 
 

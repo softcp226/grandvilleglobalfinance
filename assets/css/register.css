@@ -3,8 +3,8 @@
 
 /*  #642e35 */
 :root {
-  --main-color:#26b6d4 ;
-  --secondary-color: #26b6d4 ;
+  --main-color:#4c0583 ;
+  --secondary-color: #3155e7;
   --gradient: linear-gradient(
     135deg,
     var(--main-color),
