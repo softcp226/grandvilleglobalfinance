@@ -6,6 +6,14 @@ const usdt_icon =
   "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/256/Tether-USDT-icon.png";
 const perfect_money_icon =
   "https://play-lh.googleusercontent.com/A0-25O4FaUEAWFUAc6a4UQm6Qz3kuKzjTp93jvkBYF3Yv3UxcVx2TfHupfOUQqHcuqj2=w240-h480-rw";
+const btc_cash_icon =
+  "https://cdn4.iconfinder.com/data/icons/crypto-currency-and-coin-2/256/bitcoincash_bch_bitcoin-512.png";
+
+const ltc_icon =
+  "https://atlas-content-cdn.pixelsquid.com/stock-images/litecoin-icon-currency-symbols-mr1q0MA-600.jpg";
+
+const tron_icon =
+  "https://cdn3d.iconscout.com/3d/premium/thumb/trx-coin-7425279-6044480.png";
 
 const select_credit_icon = (data) => {
   console.log("data", data);
@@ -25,6 +33,18 @@ const select_credit_icon = (data) => {
 
     case "PERFECT MONEY":
       return perfect_money_icon;
+      break;
+
+    case "BITCOIN CASH":
+      return btc_cash_icon;
+      break;
+
+    case "LITECOIN":
+      return ltc_icon;
+      break;
+
+    case "TRON":
+      return tron_icon;
       break;
 
     default:
@@ -51,6 +71,18 @@ const select_debit_icon = (data) => {
 
     case "PERFECT MONEY":
       return perfect_money_icon;
+      break;
+
+    case "BITCOIN CASH":
+      return btc_cash_icon;
+      break;
+
+    case "LITECOIN":
+      return ltc_icon;
+      break;
+
+    case "TRON":
+      return tron_icon;
       break;
 
     default:
