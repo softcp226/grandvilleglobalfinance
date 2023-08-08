@@ -12,12 +12,21 @@ const look_for_user = (cname) => {
     }
   }
   // return "";
-  window.location.href = "/login.html";
+  // window.location.href = "/login.html";
+  window.location.replace("signin.html")
+  
+  
+  
+  
 };
 
 // let user_is_active = look_for_user("is_active");
 // if (user_is_active == "false") {
-//   window.location.href = "/inactive.html";
+//   window.location.href = "/inactive.
+
+
+
+
 // }
 
 ((cname) => {
@@ -35,5 +44,9 @@ const look_for_user = (cname) => {
     }
   }
   // return "";
-  window.location.href = "/login.html";
+  window.location.href = "/signin.html"
+  
+  
+  
+
 })("token");
