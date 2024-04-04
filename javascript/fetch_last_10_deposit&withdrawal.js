@@ -95,40 +95,68 @@ const create_credit_element = (data) => {
   const deposit_div = document.createElement("div");
   const dep_icon_container_div = document.createElement("div");
   const dep_icon_img = document.createElement("img");
+  const user_icon=document.createElement("i");
   const dep_name_container = document.createElement("div");
   const dep_name_p = document.createElement("p");
   const dep_amount_p = document.createElement("p");
 
-  deposit_div.className = "deposit";
+  deposit_div.className = "homelastbox";
+  deposit_div.style.display="flex"
+  // deposit_div.style.flexDirection="row"
+  deposit_div.style.justifyContent="space-around"
+ 
   dep_icon_container_div.className = "dep_icon_container";
   dep_icon_img.src = select_credit_icon(data.deposit_request);
-  dep_name_container.append(dep_name_p, dep_amount_p);
+  dep_icon_img.style.width="20px"
+  // dep_name_container.append(dep_name_p, dep_amount_p);
+  user_icon.className="fa fa-user"
   dep_name_p.innerHTML = data.user ? data.user.username : "UNAVAILABLE...";
-  dep_amount_p.innerHTML = data.credit;
+  dep_name_p.style.marginLeft="5px"
+ dep_name_container.append(user_icon,dep_name_p,)
+ dep_name_container.style.display="flex"
+ 
 
-  dep_icon_container_div.append(dep_icon_img);
-  deposit_div.append(dep_icon_container_div, dep_name_container);
-  document.querySelector("#latest_deposit").append(deposit_div);
+  dep_amount_p.innerHTML = data.credit;
+dep_name_container.style.width="45%"
+dep_amount_p.style.marginLeft="45%"
+  // dep_icon_container_div.append(dep_icon_img);
+  deposit_div.append(dep_name_container ,dep_icon_img,dep_amount_p);
+  document.querySelector("#last_10_deposit").append(deposit_div);
 };
 
 const create_debit_element = (data) => {
   const deposit_div = document.createElement("div");
   const dep_icon_container_div = document.createElement("div");
   const dep_icon_img = document.createElement("img");
+  dep_icon_img.style.width="20px"
+  const user_icon=document.createElement("i");
   const dep_name_container = document.createElement("div");
   const dep_name_p = document.createElement("p");
   const dep_amount_p = document.createElement("p");
 
-  deposit_div.className = "deposit";
+  deposit_div.className = "homelastbox";
+  deposit_div.style.display="flex"
+  // deposit_div.style.flexDirection="row"
+  deposit_div.style.justifyContent="space-around"
+
   dep_icon_container_div.className = "dep_icon_container";
   dep_icon_img.src = select_debit_icon(data.withdrawal_request);
   dep_name_container.append(dep_name_p, dep_amount_p);
   dep_name_p.innerHTML = data.user ? data.user.username : "UNAVAILABLE...";
+
+  user_icon.className="fa fa-user"
+  dep_name_p.style.marginLeft="5px"
+  dep_name_container.append(user_icon,dep_name_p,)
+  dep_name_container.style.display="flex"
+
+  dep_name_p.style.width="45%"
+dep_amount_p.style.marginLeft="45%"
   dep_amount_p.innerHTML = data.debit;
 
   dep_icon_container_div.append(dep_icon_img);
-  deposit_div.append(dep_icon_container_div, dep_name_container);
-  document.querySelector("#latest_withdrawal").append(deposit_div);
+  deposit_div.append(dep_name_container,dep_icon_img,dep_amount_p);
+  document.querySelector("#last_10_withdrawal").append(deposit_div);
+
 };
 // const create_credit_element = (data) => {
 //   const container_col_sm = document.createElement("div");

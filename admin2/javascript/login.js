@@ -4,7 +4,7 @@ const setCookie = (token, admin) => {
   let expires = "expires=" + d.toUTCString();
   document.cookie = `admin_token=${token} ; ${expires}`;
   document.cookie = `admin=${admin} ; ${expires}`;
-  window.location.replace("/admin/dashboard.html");
+  window.location.replace("dashboard.html");
 };
 
 const check_user = () => {};
@@ -16,9 +16,8 @@ const fetch_admin = async (admin_form) => {
   // console.log(admin_form);
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/admin/login",
       // "http://localhost:5000/api/admin/login",
-
+      "https://invesco-global-backend.glitch.me/api/admin/login",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

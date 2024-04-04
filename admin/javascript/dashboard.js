@@ -1,4 +1,13 @@
-const get_adminInfo = (cname) => {
+// const setCookie = (token, admin) => {
+//   const d = new Date();
+//   d.setTime(d.getTime() + 24 * 60 * 60 * 1000);
+//   let expires = "expires=" + d.toUTCString();
+//   document.cookie = `token=${token} ; ${expires}`;
+//   document.cookie = `admin=${admin} ; ${expires}`;
+//   window.location.replace("/admin/dashboard.html");
+// };
+
+function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
   let ca = decodedCookie.split(";");
@@ -11,63 +20,113 @@ const get_adminInfo = (cname) => {
       return c.substring(name.length, c.length);
     }
   }
-
   // return "";
-  window.location.href = "/admin";
-};
-const select_element=(id,innerText)=>{
-return document.querySelector(`#${id}`).innerHTML=innerText
+  window.location.replace("/admin");
 }
-const create_element = (data) => {
-    document.querySelector("#user_length").innerHTML=data.user_length;
-    document.querySelector(
-      "#active_user_length",
-    ).innerHTML = `${data.active_users.length} ${data.active_users.percentage}`;
-// document.querySelector("#suspended_users_length").innerHTML;
-select_element(
-  "suspended_users_length",
-  `${data.suspended_users.length} ${data.suspended_users.percentage}`,
-);
-select_element(
-  "disabled_users_length",
-  `${data.disabled_users.length} ${data.disabled_users.percentage}`,
-);
 
-select_element(
-  "users_that_ever_madedeposit",
-  `${data.users_ever_madedeposit.length} ${data.users_ever_madedeposit.percentage} `,
-);
-select_element(
-  "users_that_never_madedeposit",
-  `${data.users_that_never_madedeposit.length} 
-  ${data.users_that_never_madedeposit.percentage}`,
-);
-select_element("investment_package", `${data.investment_packages.length}`);
-select_element("withdrawal_request",`${data.withdrawal_request.length}`);
-select_element("pending_deposit", `${data.pending_deposit.length}`);
+//
+
+const handle_delete_user = async (event, user_id) => {
+  event.target.innerHTML = "Proccessing...";
+  let token = getCookie("admin_token");
+  let admin = getCookie("admin");
+  try {
+    const response = await fetch(
+      "https://invesco-global-backend.glitch.me/api/admin/users/delete_user",
+      {
+        method: "DELETE",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ token, admin, users:[ user_id] }),
+      },
+    );
+    const result = await response.json();
+    console.log(result);
+    if (result.error) {
+      event.target.innerHTML = "Try again";
+      document.querySelector(".errMessage").innerHTML = result.errMessage;
+      alert(result.errMessage);
+    } else {
+      alert(result.message);
+      event.target.innerHTML = "Success";
+      window.location.href = "/admin/dashboard.html";
+    }
+  } catch (err) {
+    event.target.innerHTML = "Try again";
+    console.log(err);
+    alert(err.message);
+  }
+};
+
+const createAndAppendElement = (element) => {
+  const section = document.createElement("section");
+  const E_M = document.createElement("h4");
+  const final_balance = document.createElement("h4");
+  const P_L = document.createElement("h4");
+  const AI = document.createElement("h4");
+  const RF = document.createElement("h4");
+  const CCBTN = document.createElement("button");
+  const DCBTN = document.createElement("button");
+  const RIBTN = document.createElement("button");
+  E_M.innerHTML = `${element.email} || ${element.username}`;
+  final_balance.innerHTML = `$${element.final_balance
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+  P_L.innerHTML = `$${element.profit_loss
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+
+  AI.innerHTML = `$${element.active_investment
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+  RF.innerHTML = `$${element.referral_bonus
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+
+  CCBTN.innerHTML = "CREDIT USER";
+  DCBTN.innerHTML = "DELETE USER";
+  RIBTN.innerHTML = "RAISE INVESTMENT";
+
+  CCBTN.className = "btn btn-primary";
+  DCBTN.className = "btn btn-danger";
+  RIBTN.className = "btn btn-primary";
+
+  CCBTN.onclick = () =>
+    (window.location.href = `/admin/fund-user.html?${element._id}`);
+
+  DCBTN.onclick = () => handle_delete_user(event, element._id);
+
+  RIBTN.onclick = () =>
+    (window.location.href = `/admin/raise-investment.html?${element._id}`);
+
+  section.append(E_M, final_balance, P_L, AI, RF, CCBTN, DCBTN,RIBTN);
+  document.querySelector(".history-table").append(section);
+};
+const setText = (userInfo) => {
+  console.log("userInfo", userInfo)
+  userInfo.users.map((info) => createAndAppendElement(info));
 };
 
 (async () => {
-  let admin = get_adminInfo("admin");
-  let token = get_adminInfo("admin_token");
-
+  let token = getCookie("admin_token");
+  let admin = getCookie("admin");
   try {
     const response = await fetch(
       "https://invesco-global-backend.glitch.me/api/admin/dashboard/details",
       {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ admin, token }),
+        body: JSON.stringify({ token, admin }),
       },
     );
     const result = await response.json();
-    console.log(result)
-    if (result.error) {
-      alert(error.message);
-    }else{
-        create_element(result.message);
-    }
-  } catch (error) {
-   console.log(error);
+    console.log(result);
+    if (result.error)
+      return (document.querySelector(".errMessage").innerHTML =
+        result.errMessage);
+
+    setText(result.message);
+  } catch (err) {
+    console.log(err);
+    document.querySelector(".errMessage").innerHTML = err.message;
   }
 })();
