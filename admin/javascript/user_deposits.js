@@ -68,7 +68,7 @@ const createAndAppendElement = (element) => {
   depositor.innerHTML = element.user
     ? `${element.user.email} || ${element.user.username}`
     : "";
-  currency.innerHTML = element.currency;
+  currency.innerHTML = element.payment_method;
   amount.innerHTML = `$${element.deposit_amount
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;

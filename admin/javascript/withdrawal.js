@@ -30,12 +30,12 @@ const handle_approve_withdrawal = async (btn, withdrawal_request) => {
   let admin = getCookie("admin");
   try {
     const response = await fetch(
-      "https://softjovial-backend.glitch.me/api/admin/withdrawal/fetch/withdrawal/approval",
+      "https://invesco-global-backend.glitch.me/api/admin/withdrawal/approve",
       // "http://localhost:5000/api/admin/withdrawal/fetch/withdrawal/approval",
       {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ token, admin, withdrawal_request }),
+        body: JSON.stringify({ token, admin, withdrawal_request, withdrawal_hash:"####" }),
       },
     );
     const result = await response.json();
@@ -63,7 +63,7 @@ const handle_delete_withdrawal = async (btn, withdrawal_request) => {
   let admin = getCookie("admin");
   try {
     const response = await fetch(
-      "https://softjovial-backend.glitch.me/api/admin/withdrawal/fetch/withdrawal/delete",
+      "https://invesco-global-backend.glitch.me/api/admin/withdrawal/fetch/withdrawal/delete",
       {
         method: "DELETE",
         headers: { "content-type": "application/json" },

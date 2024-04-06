@@ -125,7 +125,7 @@ const setText = (investment_package) => {
 
 console.log(investment_package)
 
-alert(investment_package)
+// alert(investment_package)
 
   investment_package.forEach((investment_package) => {
    
@@ -271,18 +271,18 @@ document.querySelector("#investment_plans").append(div_col_lg)
     const result = await response.json();
     console.log("result", result);
     if (result.error) {
-      alert(result.errMessage);
+      // alert(result.errMessage);
     } else {
       setText(result.message);
     }
   } catch (error) {
     console.log(error);
-    alert(error.message);
+    // alert(error.message);
   }
 })();
 
 
-
+// alert
 
 
 

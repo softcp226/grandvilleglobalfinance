@@ -373,3 +373,4 @@ const fetch_first_10_withdrawals = async () => {
   }
 };
 fetch_first_10_withdrawals();
+// alert

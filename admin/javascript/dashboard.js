@@ -119,10 +119,9 @@ const setText = (userInfo) => {
       },
     );
     const result = await response.json();
-    console.log(result);
-    if (result.error)
-      return (document.querySelector(".errMessage").innerHTML =
-        result.errMessage);
+    console.log('result',result);
+    if (result.message.users<=0)
+      return (document.querySelector(".errMessage").innerHTML = "Sorry no user has created an account at the moment");
 
     setText(result.message);
   } catch (err) {
