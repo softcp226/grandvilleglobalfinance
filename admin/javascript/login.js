@@ -16,7 +16,7 @@ const fetch_admin = async (admin_form) => {
   // console.log(admin_form);
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/admin/login",
+      "https://classicinvestment-backend.glitch.me/api/admin/login",
       // "http://localhost:5000/api/admin/login",
 
       {

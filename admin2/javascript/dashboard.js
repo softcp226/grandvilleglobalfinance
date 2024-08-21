@@ -53,7 +53,7 @@ select_element("pending_deposit", `${data.pending_deposit.length}`);
 
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/admin/dashboard/details",
+      "https://classicinvestment-backend.glitch.me/api/admin/dashboard/details",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

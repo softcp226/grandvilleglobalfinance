@@ -72,7 +72,7 @@ container_tr.append(date_td)
 
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/admin/deposit_request",
+      "https://classicinvestment-backend.glitch.me/api/admin/deposit_request",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

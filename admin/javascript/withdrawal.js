@@ -30,7 +30,7 @@ const handle_approve_withdrawal = async (btn, withdrawal_request) => {
   let admin = getCookie("admin");
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/admin/withdrawal/approve",
+      "https://classicinvestment-backend.glitch.me/api/admin/withdrawal/approve",
       // "http://localhost:5000/api/admin/withdrawal/fetch/withdrawal/approval",
       {
         method: "POST",
@@ -63,7 +63,7 @@ const handle_delete_withdrawal = async (btn, withdrawal_request) => {
   let admin = getCookie("admin");
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/admin/withdrawal/fetch/withdrawal/delete",
+      "https://classicinvestment-backend.glitch.me/api/admin/withdrawal/fetch/withdrawal/delete",
       {
         method: "DELETE",
         headers: { "content-type": "application/json" },
@@ -174,7 +174,7 @@ const setText = (userInfo) => {
   let admin = getCookie("admin");
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/admin/withdrawal/fetch",
+      "https://classicinvestment-backend.glitch.me/api/admin/withdrawal/fetch",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

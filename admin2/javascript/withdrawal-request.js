@@ -135,7 +135,7 @@ let skip_count = 0;
 
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/admin/withdrawal/fetch",
+      "https://classicinvestment-backend.glitch.me/api/admin/withdrawal/fetch",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

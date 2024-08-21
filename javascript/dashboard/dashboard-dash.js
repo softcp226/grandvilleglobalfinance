@@ -45,7 +45,7 @@ const getCookie = (cname) => {
   const token = getCookie("token");
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/user/find",
+      "https://classicinvestment-backend.glitch.me/api/user/find",
       // "http://localhost:5000/api/user/find",
 
       {

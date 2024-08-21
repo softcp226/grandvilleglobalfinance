@@ -28,7 +28,7 @@ const get_adminInfo = (cname) => {
 //   document.querySelector("#add_to_problem").innerHTML = "Proccessing...";
 //   try {
 //     const response = await fetch(
-//       "https://invesco-global-backend.glitch.me/api/admin/loan_request/problem",
+//       "https://classicinvestment-backend.glitch.me/api/admin/loan_request/problem",
 //       {
 //         method: "POST",
 //         headers: { "content-type": "application/json" },
@@ -67,7 +67,7 @@ const get_adminInfo = (cname) => {
 //   console.log(deposit_id);
 //   try {
 //     const response = await fetch(
-//       "https://invesco-global-backend.glitch.me/api/admin/loan_request/delete",
+//       "https://classicinvestment-backend.glitch.me/api/admin/loan_request/delete",
 //       {
 //         method: "DELETE",
 //         headers: { "content-type": "application/json" },
@@ -103,7 +103,7 @@ const handle_disaprove_loan = async (btn, loan_request) => {
   btn.innerHTML = "Proccessing...";
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/admin/loan_request/crud/disaprove",
+      "https://classicinvestment-backend.glitch.me/api/admin/loan_request/crud/disaprove",
       // "http://localhost:5000/api/admin/loan_request/crud/disaprove",
       {
         method: "POST",
@@ -143,7 +143,7 @@ const submit_loan_approval = async (form) => {
   document.querySelector("#approve_loan").innerHTML = "processing...";
   try {
     const response = await fetch(
-     "https://invesco-global-backend.glitch.me/api/admin/deposit/approve",
+     "https://classicinvestment-backend.glitch.me/api/admin/deposit/approve",
       // "http://localhost:5000/api/admin/loan_request/crud",
       {
         method: "POST",
@@ -201,7 +201,7 @@ const create_element = (data) => {
   let loan_request = get_loan_request();
   try {
     const response = await fetch(
-       "https://invesco-global-backend.glitch.me/api/admin/loan_request/single",
+       "https://classicinvestment-backend.glitch.me/api/admin/loan_request/single",
       // "http://localhost:5000/api/admin/loan_request/one",
       {
         method: "POST",

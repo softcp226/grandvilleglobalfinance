@@ -40,7 +40,7 @@ const submit_userForm = async (form) => {
   try {
     document.querySelector("#register").innerHTML = "Proccessing...";
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/newuser/register",
+      "https://classicinvestment-backend.glitch.me/api/newuser/register",
       // "http://localhost:5000/api/newuser/register",
 
       {

@@ -45,7 +45,7 @@ const setPackages = (investment_package) => {
 (async () => {
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/investment_packages/fetch",
+      "https://classicinvestment-backend.glitch.me/api/investment_packages/fetch",
       // "http://localhost:5000/api/investment_packages/fetch",
 
       {

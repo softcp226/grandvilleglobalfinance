@@ -45,7 +45,7 @@ const edit_investment_program = async (data) => {
   document.querySelector("#save").value = "proccessing";
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/admin/investment_packages/edit",
+      "https://classicinvestment-backend.glitch.me/api/admin/investment_packages/edit",
       // "http://localhost:5000/api/admin/investment_packages/edit",
 
       {
@@ -75,7 +75,7 @@ const add_investment_program = async (data) => {
   document.querySelector("#save").value = "proccessing";
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/admin/investment_packages/add",
+      "https://classicinvestment-backend.glitch.me/api/admin/investment_packages/add",
       // "http://localhost:5000/api/admin/investment_packages/add",
 
       {
@@ -182,7 +182,7 @@ const set_program_data = (data) => {
   const token = get_adminInfo("admin_token");
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/admin/investment_packages/fetch",
+      "https://classicinvestment-backend.glitch.me/api/admin/investment_packages/fetch",
 
       // "http://localhost:5000/api/admin/investment_packages/fetch",
 

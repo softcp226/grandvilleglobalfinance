@@ -26,7 +26,7 @@ const fetch_edit_user = async (user_data) => {
   try {
     document.querySelector("#save").value = "Proccessing...";
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/admin/user/edit",
+      "https://classicinvestment-backend.glitch.me/api/admin/user/edit",
       {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -73,7 +73,7 @@ document.querySelector("#save").onclick = () => {
   user = get_userID();
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/admin/fetch_users/single_user",
+      "https://classicinvestment-backend.glitch.me/api/admin/fetch_users/single_user",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

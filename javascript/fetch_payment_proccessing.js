@@ -14,7 +14,7 @@ const set_payment_proccessing = (data) => {
   let user = getCookie("user");
   try {
     const response = await fetch(
-      "https://invesco-global-backend.glitch.me/api/user/fetch_payment_proccessing",
+      "https://classicinvestment-backend.glitch.me/api/user/fetch_payment_proccessing",
       // "http://localhost:5000/api/user/fetch_payment_proccessing",
 
       {
