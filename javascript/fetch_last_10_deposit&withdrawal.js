@@ -104,7 +104,7 @@ const create_credit_element = (data) => {
   deposit_div.style.display="flex"
   // deposit_div.style.flexDirection="row"
   deposit_div.style.justifyContent="space-around"
- 
+  deposit_div.style.color="#fff"
   dep_icon_container_div.className = "dep_icon_container";
   dep_icon_img.src = select_credit_icon(data.deposit_request);
   dep_icon_img.style.width="20px"
@@ -374,3 +374,5 @@ const fetch_first_10_withdrawals = async () => {
 };
 fetch_first_10_withdrawals();
 // alert
+
+// homelastbox
