@@ -13,7 +13,7 @@ const get_adminInfo = (cname) => {
   }
 
   // return "";
-  window.location.href = "/admin";
+  window.location.href = "/admin2";
 };
 
 const create_element = (data) => {
@@ -176,3 +176,4 @@ let skip_count = 0;
 //   }
 
 // })
+// window.location

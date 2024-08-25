@@ -30,7 +30,7 @@ const add_proccessing = async (data) => {
       document.querySelector("#errMessage").innerHTML = result.errMessage;
       document.querySelector("#update").value = "Try again";
     } else {
-      window.location.replace("/admin/proccessings.html");
+      window.location.replace("/admin2/proccessings.html");
       // result.message.forEach((element) => {
       //   create_element(element);
       // });
@@ -82,7 +82,7 @@ const get_adminInfo = (cname) => {
   }
 
   // return "";
-  window.location.href = "/admin";
+  window.location.href = "/admin2";
 };
 
 
@@ -121,3 +121,6 @@ const create_element = (data) => {
     document.querySelector("#errMessage").innerHTML = error.message;
   }
 })();
+
+
+// window.location

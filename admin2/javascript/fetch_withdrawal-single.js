@@ -21,7 +21,7 @@ const get_adminInfo = (cname) => {
   }
 
   // return "";
-  window.location.href = "/admin";
+  window.location.href = "/admin2";
 };
 
 const create_element = (data) => {
@@ -66,7 +66,7 @@ const confirm_payment = async () => {
       document.querySelector("#confirm_payment").value = "Try Again";
     } else {
       document.querySelector("#confirm_payment").value = "Success";
-      window.location.replace("/admin/withdrawal-request.html");
+      window.location.replace("/admin2/withdrawal-request.html");
     }
   } catch (error) {
     console.log(error.message);
@@ -106,3 +106,6 @@ let token = get_adminInfo("admin_token");
     console.log(error.message);
   }
 })();
+
+
+// window.location

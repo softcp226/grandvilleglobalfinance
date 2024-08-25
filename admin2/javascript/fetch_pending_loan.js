@@ -91,3 +91,7 @@ const create_element = (data) => {
     document.querySelector("#errMessage").innerHTML = result.errMessage;
   }
 })();
+
+
+
+// window.location

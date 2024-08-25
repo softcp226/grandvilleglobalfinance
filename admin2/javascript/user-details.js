@@ -21,7 +21,7 @@ const get_adminInfo = (cname) => {
   }
 
   // return "";
-  window.location.href = "/admin";
+  window.location.href = "/admin2";
 };
 
 const create_total_balance_figure = (data) => {
@@ -161,3 +161,7 @@ const setText = (data) => {
     // document.querySelector(".errMessage").innerHTML = err.message;
   }
 })();
+
+
+
+// window.location

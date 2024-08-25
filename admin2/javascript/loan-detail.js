@@ -21,7 +21,7 @@ const get_adminInfo = (cname) => {
   }
 
   // return "";
-  window.location.href = "/admin";
+  window.location.href = "/admin2";
 };
 
 // const addProblem = async (data) => {
@@ -119,7 +119,7 @@ const handle_disaprove_loan = async (btn, loan_request) => {
       return;
     }
     btn.innerHTML = "Success";
-    window.location.replace("/admin/pending-loan.html");
+    window.location.replace("/admin2/pending-loan.html");
   } catch (err) {
     btn.innerHTML = "Try again";
 
@@ -159,7 +159,7 @@ const submit_loan_approval = async (form) => {
       return;
     }
     document.querySelector("#approve_loan").innerHTML = "success";
-    window.location.href = "/admin/pending-loan.html";
+    window.location.href = "/admin2/pending-loan.html";
   } catch (err) {
     document.querySelector(".errMessage").innerHTML = err.message;
     document.querySelector("#approve_loan").innerHTML = "Try again";
@@ -222,3 +222,7 @@ const create_element = (data) => {
     document.querySelector("#errMessage").innerHTML = error.message;
   }
 })();
+
+
+
+// window.location

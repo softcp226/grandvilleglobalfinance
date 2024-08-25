@@ -23,7 +23,7 @@ const update_user_status = async (button,users, status) => {
     }
 
     button.value = "success";
-  window.location.replace("/admin/users.html");
+  window.location.replace("/admin2/users.html");
     // console.log(result);
     //     console.log(result);
   } catch (error) {
@@ -53,7 +53,7 @@ const handle_delete_user = async (users) => {
       alert(result.errMessage);
     } else {
       alert(result.message);
-      window.location.replace("/admin/users.html");
+      window.location.replace("/admin2/users.html");
       //   event.target.innerHTML = "Success";
       //   window.location.href = "/admin/dashboard.html";
     }
@@ -119,3 +119,6 @@ document.querySelector("#activate_user").onclick = () => {
   //   console.log("selected users=", selected_users);
   selected_users = [];
 };
+
+
+// window.location

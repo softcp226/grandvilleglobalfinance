@@ -22,7 +22,7 @@ const handle_mass_payment = async (btn,withdrawal_request) => {
       btn.value = "Try Again";
     } else {
       btn.value = "Success";
-      window.location.replace("/admin/withdrawal-request.html");
+      window.location.replace("/admin2/withdrawal-request.html");
     }
   } catch (error) {
     console.log(error.message);
@@ -53,7 +53,7 @@ const handle_remove_withdrawal= async (btn, withdrawal_request) => {
       btn.value = "Try Again";
     } else {
       btn.value = "Success";
-      window.location.replace("/admin/withdrawal-request.html");
+      window.location.replace("/admin2/withdrawal-request.html");
     }
   } catch (error) {
     console.log(error.message);
@@ -123,3 +123,4 @@ document.querySelector("#mass_payment").onclick = () => {
   //   //   console.log("selected users=", selected_users);
   //   selected_users = [];
 
+  // window.location

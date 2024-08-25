@@ -13,7 +13,7 @@ const get_adminInfo = (cname) => {
   }
 
   // return "";
-  window.location.href = "/admin";
+  window.location.href = "/admin2";
 };
 
 // document.create_element ;
@@ -39,7 +39,7 @@ handle_delete_package = async (btn, package_id) => {
       document.querySelector("#errMessage").innerHTML = result.errMessage;
     } else {
      alert("success");
-     window.location.replace("/admin/investment-program.html");
+     window.location.replace("/admin2/investment-program.html");
     }
   } catch (error) {
     console.log(error);
@@ -212,3 +212,6 @@ const create_element = (data) => {
     document.querySelector("#errMessage").innerHTML = error.message;
   }
 })();
+
+
+

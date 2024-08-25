@@ -90,3 +90,6 @@ container_tr.append(date_td)
    document.querySelector("#errMessage").innerHTML = result.errMessage;
   }
 })();
+
+
+// window.location

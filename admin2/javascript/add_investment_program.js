@@ -22,7 +22,7 @@ const get_adminInfo = (cname) => {
   }
 
   // return "";
-  window.location.href = "/admin";
+  window.location.href = "/admin2";
 };
 
 const show_input_error = (input) => {
@@ -61,7 +61,7 @@ const edit_investment_program = async (data) => {
       document.querySelector("#errMessage").innerHTML = result.errMessage;
     } else {
       document.querySelector("#save").value = "Success";
-      window.location.href = `/admin/investment-program.html`;
+      window.location.href = `/admin2/investment-program.html`;
     }
   } catch (error) {
     console.log(error);
@@ -91,7 +91,7 @@ const add_investment_program = async (data) => {
       document.querySelector("#errMessage").innerHTML = result.errMessage;
     } else {
       document.querySelector("#save").value = "Success";
-      window.location.href = `/admin/investment-program.html`;
+      window.location.href = `/admin2/investment-program.html`;
     }
   } catch (error) {
     console.log(error);

@@ -13,7 +13,7 @@ const get_adminInfo = (cname) => {
   }
 
   // return "";
-  window.location.href = "/admin";
+  window.location.href = "/admin2";
 };
 const select_element=(id,innerText)=>{
 return document.querySelector(`#${id}`).innerHTML=innerText
@@ -71,3 +71,6 @@ select_element("pending_deposit", `${data.pending_deposit.length}`);
    console.log(error);
   }
 })();
+
+
+// window.location

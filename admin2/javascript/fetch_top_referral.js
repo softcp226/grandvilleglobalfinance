@@ -13,7 +13,7 @@ const get_adminInfo = (cname) => {
   }
 
   // return "";
-  window.location.href = "/admin";
+  window.location.href = "/admin2";
 };
 let row_number = 1;
 construct_row_number = () => (row_number == 1 ? ++row_number : --row_number);
@@ -61,3 +61,6 @@ container_tr.append(user_name_td,amount_td);
     document.querySelector("#errMessage").innerHTML = result.errMessage;
   }
 })();
+
+
+// window.location

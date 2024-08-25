@@ -21,7 +21,7 @@ const get_adminInfo = (cname) => {
   }
 
   // return "";
-  window.location.href = "/admin";
+  window.location.href = "/admin2";
 };
 
 const addProblem = async (data) => {
@@ -42,7 +42,7 @@ const addProblem = async (data) => {
     } else {
       document.querySelector("#add_to_problem").innerHTML = "Success";
 
-      window.location.replace("/admin/pending-deposit.html");
+      window.location.replace("/admin2/pending-deposit.html");
     }
   } catch (error) {
     document.querySelector("#add_to_problem").innerHTML = "Try again";
@@ -83,7 +83,7 @@ const handle_delete_deposit_request = async (btn, deposit_id) => {
     } else {
       alert(result.message);
       btn.innerHTML = "Success";
-      window.location.href = "/admin/pending-deposit.html";
+      window.location.href = "/admin2/pending-deposit.html";
     }
   } catch (err) {
     btn.innerHTML = "Try again";
@@ -121,7 +121,7 @@ const submit_deposit_approval = async (form) => {
       return;
     }
     document.querySelector("#delete_btn").innerHTML = "success";
-    window.location.href = "/admin/pending-deposit.html";
+    window.location.href = "/admin2/pending-deposit.html";
   } catch (err) {
     document.querySelector(".errMessage").innerHTML = err.message;
     document.querySelector("#delete_btn").innerHTML = "Try again";
@@ -180,3 +180,7 @@ const create_element = (data) => {
     document.querySelector("#errMessage").innerHTML = error.message;
   }
 })();
+
+
+
+// window.location

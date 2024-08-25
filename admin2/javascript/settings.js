@@ -13,7 +13,7 @@ const get_adminInfo = (cname) => {
   }
 
   // return "";
-  window.location.href = "/admin";
+  window.location.href = "/admin2";
 };
 
 const setText = (data) => {};
@@ -98,3 +98,7 @@ document.querySelectorAll("select").forEach((select) => {
     select.style.backgroundColor = "#fff";
   };
 });
+
+
+
+// window.location

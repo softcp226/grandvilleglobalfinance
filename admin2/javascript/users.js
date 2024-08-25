@@ -18,7 +18,7 @@ function get_adminInfo(cname) {
     }
   }
   // return "";
-  window.location.replace("/admin");
+  window.location.replace("/admin2");
 }
 
 //
@@ -251,3 +251,8 @@ const setText = (userInfo) => {
     document.querySelector("#errMessage").innerHTML = err.message;
   }
 })();
+
+
+
+
+// window.location

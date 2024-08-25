@@ -61,3 +61,6 @@ document.querySelector("#user_name").onkeyup = (input) => {
 document.querySelector("#password").onkeyup = () => {
   document.querySelector("#password").style.border = "2px solid #fff";
 };
+
+
+// window.location
