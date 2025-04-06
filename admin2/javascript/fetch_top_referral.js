@@ -43,7 +43,7 @@ container_tr.append(user_name_td,amount_td);
 
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/user/top_referral",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/user/top_referral",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

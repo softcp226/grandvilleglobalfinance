@@ -67,7 +67,7 @@ const shape_result = (userInfo) => {
   let user = getCookie("user");
   try {
     const response = await fetch(
-   "https://classicinvestment-backend.glitch.me/api/user/loan_request/fetch",
+   "https://grandvilleglobalfinance-api.glitch.me/api/user/loan_request/fetch",
       // "http://localhost:5000/api/user/loan_request/fetch",
 
       {

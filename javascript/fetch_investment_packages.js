@@ -45,8 +45,8 @@ const setPackages = (investment_package) => {
 (async () => {
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/investment_packages/fetch",
-      // "http://localhost:5000/api/investment_packages/fetch",
+      "https://grandvilleglobalfinance-api.glitch.me/api/investment_packages/fetch",
+      // "http://localhost:5000https://grandvilleglobalfinance-api.glitch.meinvestment_packages/fetch",
 
       {
         method: "POST",

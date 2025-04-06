@@ -24,7 +24,7 @@ const set_admin = async (data) => {
   try {
     const response = await fetch(
       // "http://localhost:5000/api/admin/setting",
-      "https://classicinvestment-backend.glitch.me/api/admin/setting",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/setting",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

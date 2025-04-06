@@ -1805,6 +1805,7 @@ background: #000;
 	}
 	header .navbar-inverse {
 		text-align: left;
+        display: none;
 	}
 	header .navbar-toggle{ margin: 17px 0 0px; border:0; background: #0a0a0a; border-radius:0;}
 	header .navbar-inverse .navbar-toggle:hover, 

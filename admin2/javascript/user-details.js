@@ -139,7 +139,7 @@ const setText = (data) => {
   user = get_userID();
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/fetch_users/single_user",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/fetch_users/single_user",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

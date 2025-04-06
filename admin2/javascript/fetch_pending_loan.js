@@ -71,7 +71,7 @@ const create_element = (data) => {
 
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/loan_request",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/loan_request",
       // "http://localhost:5000/api/admin/loan_request",
 
       {

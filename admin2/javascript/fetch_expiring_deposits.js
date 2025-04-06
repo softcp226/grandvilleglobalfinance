@@ -67,7 +67,7 @@ const create_element = (data) => {
 
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/expiring_deposit/fetch",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/expiring_deposit/fetch",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

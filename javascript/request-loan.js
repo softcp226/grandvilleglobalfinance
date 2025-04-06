@@ -11,7 +11,7 @@ const submit_loan_request = async (data) => {
   document.querySelector("#submit").innerHTML = "Proccessing..";
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/user/loan_request",
+      "https://grandvilleglobalfinance-api.glitch.me/api/user/loan_request",
 
       // "http://localhost:5000/api/user/loan_request",
       {

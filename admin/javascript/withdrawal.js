@@ -30,8 +30,8 @@ const handle_approve_withdrawal = async (btn, withdrawal_request) => {
   let admin = getCookie("admin");
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/withdrawal/approve",
-      // "http://localhost:5000/api/admin/withdrawal/fetch/withdrawal/approval",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/withdrawal/approve",
+      // "http://localhost:5000https://grandvilleglobalfinance-api.glitch.me/api/admin/withdrawal/fetch/withdrawal/approval",
       {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -63,7 +63,7 @@ const handle_delete_withdrawal = async (btn, withdrawal_request) => {
   let admin = getCookie("admin");
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/withdrawal/fetch/withdrawal/delete",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/withdrawal/fetch/withdrawal/delete",
       {
         method: "DELETE",
         headers: { "content-type": "application/json" },
@@ -174,7 +174,7 @@ const setText = (userInfo) => {
   let admin = getCookie("admin");
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/withdrawal/fetch",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/withdrawal/fetch",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

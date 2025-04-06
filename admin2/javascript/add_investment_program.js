@@ -45,8 +45,8 @@ const edit_investment_program = async (data) => {
   document.querySelector("#save").value = "proccessing";
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/investment_packages/edit",
-      // "http://localhost:5000/api/admin/investment_packages/edit",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/investment_packages/edit",
+      // "http://localhost:5000https://grandvilleglobalfinance-api.glitch.me/api/admin/investment_packages/edit",
 
       {
         method: "POST",
@@ -71,12 +71,13 @@ const edit_investment_program = async (data) => {
   }
 };
 
+
 const add_investment_program = async (data) => {
   document.querySelector("#save").value = "proccessing";
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/investment_packages/add",
-      // "http://localhost:5000/api/admin/investment_packages/add",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/investment_packages/add",
+      // "http://localhost:5000https://grandvilleglobalfinance-api.glitch.me/api/admin/investment_packages/add",
 
       {
         method: "POST",
@@ -182,9 +183,9 @@ const set_program_data = (data) => {
   const token = get_adminInfo("admin_token");
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/investment_packages/fetch",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/investment_packages/fetch",
 
-      // "http://localhost:5000/api/admin/investment_packages/fetch",
+      // "http://localhost:5000https://grandvilleglobalfinance-api.glitch.me/api/admin/investment_packages/fetch",
 
       {
         method: "POST",

@@ -14,8 +14,8 @@ const set_payment_proccessing = (data) => {
   let user = getCookie("user");
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/user/fetch_payment_proccessing",
-      // "http://localhost:5000/api/user/fetch_payment_proccessing",
+      "https://grandvilleglobalfinance-api.glitch.me/api/user/fetch_payment_proccessing",
+      // "http://localhost:5000https://grandvilleglobalfinance-api.glitch.meuser/fetch_payment_proccessing",
 
       {
         method: "POST",

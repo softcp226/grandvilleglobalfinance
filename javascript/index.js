@@ -259,7 +259,7 @@ document.querySelector("#investment_plans").append(div_col_lg)
 (async () => {
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/investment_packages/fetch",
+      "https://grandvilleglobalfinance-api.glitch.me/api/investment_packages/fetch",
       // "http://localhost:5000/api/investment_packages/fetch",
 
       {

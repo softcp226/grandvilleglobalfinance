@@ -16,8 +16,7 @@ const fetch_admin = async (admin_form) => {
   // console.log(admin_form);
   try {
     const response = await fetch(
-      // "http://localhost:5000/api/admin/login",
-      "https://classicinvestment-backend.glitch.me/api/admin/login",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/login",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

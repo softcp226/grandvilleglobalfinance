@@ -29,9 +29,9 @@ const add_proccessing = async (data) => {
   document.querySelector("#update").value = "proccessing";
   try {
     const response = await fetch(
-      // "http://localhost:5000/api/admin/payment/proccessing",
+      // "http://localhost:5000https://grandvilleglobalfinance-api.glitch.me/api/admin/payment/proccessing",
 
-      "https://classicinvestment-backend.glitch.me/api/admin/payment/proccessing",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/payment/proccessing",
 
       {
         method: "POST",
@@ -115,7 +115,7 @@ const set_proccessing_data=(data)=>{
   const token = get_adminInfo("admin_token");
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/investment_packages/fetch",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/investment_packages/fetch",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

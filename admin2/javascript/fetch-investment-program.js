@@ -23,9 +23,9 @@ handle_delete_package = async (btn, package_id) => {
 
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/investment_packages/delete",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/investment_packages/delete",
 
-      // "http://localhost:5000/api/admin/investment_packages/delete",
+      // "http://localhost:5000https://grandvilleglobalfinance-api.glitch.me/api/admin/investment_packages/delete",
 
       {
         method: "DELETE",
@@ -189,8 +189,8 @@ const create_element = (data) => {
 
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/investment_packages",
-      // "http://localhost:5000/api/admin/investment_packages",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/investment_packages",
+      // "http://localhost:5000https://grandvilleglobalfinance-api.glitch.me/api/admin/investment_packages",
 
       {
         method: "POST",

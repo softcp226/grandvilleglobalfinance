@@ -22,7 +22,7 @@ const setText2 = (user) => {
   const token = getCookie("token");
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/user/find",
+      "https://grandvilleglobalfinance-api.glitch.me/api/user/find",
       // "http://localhost:5000/api/user/find",
       {
         method: "POST",

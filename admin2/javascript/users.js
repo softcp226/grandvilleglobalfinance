@@ -229,7 +229,7 @@ const setText = (userInfo) => {
 
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/fetch_users",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/fetch_users",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

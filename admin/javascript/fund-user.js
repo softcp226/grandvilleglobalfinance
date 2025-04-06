@@ -27,7 +27,7 @@ const handle_deposit = async (form) => {
   document.querySelector("#submit").innerHTML = "processing...";
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/admin/user/fund",
+      "https://grandvilleglobalfinance-api.glitch.me/api/admin/user/fund",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

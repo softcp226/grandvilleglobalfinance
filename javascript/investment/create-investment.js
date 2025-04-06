@@ -4,8 +4,8 @@ const handle_submit_request = async (form) => {
   document.querySelector("#submit").innerHTML = "proccesing...";
   try {
     const response = await fetch(
-      "https://classicinvestment-backend.glitch.me/api/user/create_investment",
-      // "http://localhost:5000/api/user/create_investment",
+      "https://grandvilleglobalfinance-api.glitch.me/api/user/create_investment",
+      // "http://localhost:5000https://grandvilleglobalfinance-api.glitch.me/api/user/create_investment",
 
       {
         method: "POST",
